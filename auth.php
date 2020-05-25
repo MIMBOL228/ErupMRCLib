@@ -3,7 +3,6 @@
 class auth extends mysqlo{
    function test($login,$password){
      $query = mysqlo::query("SELECT * FROM users WHERE username = :u",["u" => $login]);
-     $query['salt'] = 'sd1xd4s5x2s1d2sff2sc2f';
      $options = [
       'cost' => 12,
       'salt' => $query['salt'],
