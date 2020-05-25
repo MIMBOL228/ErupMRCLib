@@ -1,5 +1,6 @@
 <?php
   session_start();
+  include 'config.php';
   $confi = new config();
   require_once 'mysql.php';
   require_once 'mail/index.php';
